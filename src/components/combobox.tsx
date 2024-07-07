@@ -16,7 +16,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "../components/ui/popover";
-import { Button } from "../components/ui/button"
+import { Button } from "../components/ui/button";
 
 const frameworks = [
   {
