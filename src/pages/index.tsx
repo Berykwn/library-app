@@ -3,8 +3,6 @@ import MainLayout from "../layouts/main-layout";
 import RiveWrapper from "../components/rive";
 import { useEffect, useState } from "react";
 import { Book, getBooks } from "../utils/apis/books";
-import { ScrollArea } from "@radix-ui/react-scroll-area";
-import { ScrollBar } from "../components/ui/scroll-area";
 
 const Home = () => {
   const [newBooks, setNewBooks] = useState<Book[]>([]);
