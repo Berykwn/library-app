@@ -44,7 +44,9 @@ const Login = () => {
           </div>
         </CardContent>
         <CardFooter className="grid gap-6">
-          <Button type="submit">Login</Button>
+          <Button type="submit" variant="default">
+            Login
+          </Button>
           <div className="relative">
             <div className="absolute inset-0 flex items-center">
               <span className="w-full border-t" />
@@ -55,11 +57,7 @@ const Login = () => {
               </span>
             </div>
           </div>
-          <Button
-            data-testid="btn-navigate-register"
-            variant="secondary"
-            type="submit"
-          >
+          <Button variant="secondary" type="submit">
             Register
           </Button>
         </CardFooter>
