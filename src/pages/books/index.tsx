@@ -123,14 +123,14 @@ const Books = () => {
         <PaginationContent>
           <PaginationItem>
             <button onClick={handlePrevPage} disabled={page === 1}>
-              <PaginationPrevious />
+              <PaginationPrevious size="default" />
             </button>
           </PaginationItem>
 
           {[...Array(totalPages)].map((_, i) => (
             <PaginationItem key={i}>
               <button onClick={() => setPage(i + 1)} disabled={page === i + 1}>
-                <PaginationLink isActive={page === i + 1}>
+                <PaginationLink isActive={page === i + 1} size="default">
                   {i + 1}
                 </PaginationLink>
               </button>
@@ -139,7 +139,7 @@ const Books = () => {
 
           <PaginationItem>
             <button onClick={handleNextPage} disabled={page === totalPages}>
-              <PaginationNext />
+              <PaginationNext size="default" />
             </button>
           </PaginationItem>
         </PaginationContent>
