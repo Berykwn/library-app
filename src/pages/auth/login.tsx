@@ -1,5 +1,4 @@
 import Layout from "../../layouts/main-layout";
-import { Button } from "../../components/ui/button";
 import {
   Card,
   CardHeader,
@@ -10,6 +9,7 @@ import {
 } from "../../components/ui/card";
 import { Input } from "../../components/ui/input";
 import { Label } from "../../components/ui/label";
+import { Button } from "../../components/ui/button";
 
 const Login = () => {
   return (

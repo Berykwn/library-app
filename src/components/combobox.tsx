@@ -3,7 +3,6 @@ import { Check, ChevronsUpDown } from "lucide-react";
 
 import { cn } from "../lib/utils";
 
-import { Button } from "./ui/button";
 import {
   Command,
   CommandEmpty,
@@ -17,6 +16,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "../components/ui/popover";
+import { Button } from "./ui/button";
 
 const frameworks = [
   {
