@@ -9,7 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../components/ui/dropdown-menu";
-import Combobox from "../components/combobox";
+// import Combobox from "../components/combobox";
 import { DropdownMenuGroup } from "@radix-ui/react-dropdown-menu";
 
 const Navbar = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
         BookQuest
       </Link>
       <div className="flex gap-4 items-center justify-end">
-        <Combobox />
+        {/* <Combobox /> */}
 
         <DropdownMenu>
           <DropdownMenuTrigger>
