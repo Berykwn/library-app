@@ -1,6 +1,8 @@
-import { ReactNode } from "react";
-
+import { ReactNode, useEffect } from "react";
 import Navbar from "../components/navbar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useAuth } from "../utils/contexts/token"; // Make sure the path is correct
 
 interface Props {
   children: ReactNode;
@@ -8,8 +10,18 @@ interface Props {
   centerX?: boolean;
 }
 
-const Layout = (props: Readonly<Props>) => {
+const Layout = (props: Props) => {
   const { children } = props;
+  const { notifications, clearNotifications } = useAuth();
+
+  useEffect(() => {
+    if (notifications.length > 0) {
+      notifications.forEach((notification) => {
+        toast(notification.message, { type: notification.type });
+      });
+      clearNotifications();
+    }
+  }, [notifications, clearNotifications]);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -17,6 +29,7 @@ const Layout = (props: Readonly<Props>) => {
         <Navbar />
       </header>
       <main className="flex-1 lg:px-20 md:px-12 px-6 mt-3 bg-white dark:bg-slate-950">
+        <ToastContainer position="bottom-right" />
         {children}
       </main>
       <footer
